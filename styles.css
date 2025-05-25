@@ -1,0 +1,108 @@
+
+/* make sure this is the very first thing in the file */
+a.navbar-brand {
+  font-weight: bold;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 0.1em solid currentColor;
+  width: 0;
+  animation:
+    typing 8s linear forwards,
+    blink-caret .35s step-end 17 forwards;  /* 20 blinks, then hold last frame */
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to   { width: 10%; }
+}
+
+
+
+
+
+@keyframes blink-caret {
+  50% { border-color: transparent; }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+header {
+  position: relative;
+  height: 60vh;                      /* adjust for taller/shorter hero */
+  min-height: 400px;
+  background-image: url('https://i.gyazo.com/58229248c01ce751d4f75ab457107a0f.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;                       /* most bright shade... */
+  text-align: center;
+  overflow: hidden;
+}
+
+
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+
+header .hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 0 1rem;
+}
+
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  font-size: 1.25rem;
+  opacity: 0.85;
+}
+
+/* color test */
+header h1 {
+  font-size: 7rem;
+  animation: flashColor 5s ease-in-out infinite;
+}
+
+
+
+
+header .lead {
+  font-size: 3rem;
+  animation: flashColor 5s ease-in-out infinite;
+}
+@keyframes flashColor {
+  0%, 100%   { color: #ffffff; }
+  50%        { color: rgb(183, 183, 41); }
+}
+
+
+
+
+
+#projects .card {
+  background-color: #212529;  
+}
+
+#projects .card .card-title,
+#projects .card .card-text {
+  color: #ffffff;  
+}
+
+
+
+
